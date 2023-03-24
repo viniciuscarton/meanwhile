@@ -6,7 +6,7 @@
 Meanwhile is a Twin Peaks themed To-Do List. 
 
 ## 🦉🦉🦉🦉🦉🦉🦉🦉🦉🦉🦉🦉🦉🦉
-![doppelgänger!](/meanwhile/src/assets/images/meanwhile.gif)
+![doppelgänger!](meanwhile.gif)
 
 ## Usage
 There is a field for adding a new task. The user should also set a duration (minutes, hours, days) and a place (anywhere, somewhere) where that task can be made. 
