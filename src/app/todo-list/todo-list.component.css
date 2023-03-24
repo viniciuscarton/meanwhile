@@ -1,0 +1,192 @@
+* {
+  background-color: rgb(247, 12, 8);
+  margin: 0;
+}
+
+@font-face {
+  font-family: 'Merriweather';
+  src: url('/assets/font/Merriweather.ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.add {
+  width: 1200px;
+  background-color: rgb(247, 12, 8);
+  align-items: center;
+  margin-top: 20px;
+  justify-content: space-between;
+  display: inline-flex;
+  flex-direction: row;
+}
+
+.add h1 {
+  margin-right: 740px;
+  font-family: 'Merriweather';
+  font-weight: 900;
+  font-style: italic;
+  text-transform: lowercase;
+  font-size: 40px;
+}
+
+.add img {
+  width: 190px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.filter img {
+  display: flex;
+  width: 40px;
+}
+
+.task-container {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  background-color: rgb(247, 12, 8);
+  width: 1200px;
+  margin-top: 30px;
+}
+
+.task {
+  background-color: rgb(247, 12, 8);
+  align-items: center;
+  justify-content: space-between;
+  display: inline-flex;
+  flex-direction: row;
+  padding: 20px;
+  font-family: 'Merriweather';
+  font-weight: 900;
+  font-style: italic;
+  text-transform: lowercase;
+}
+
+.formfield input text {
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.formfield input,
+.formfield select,
+.formfield option {
+  background-color: rgb(243, 194, 194);
+  margin-bottom: 50px;
+  text-align: left;
+  padding: 15px;
+  font-family: 'Merriweather';
+  font-weight: 900;
+  font-style: italic;
+  text-transform: lowercase;
+  font-size: 20px;
+  border-radius: 6px;
+  border: 0;
+}
+
+.formfield .glow,
+.formfield option {
+  text-align: center;
+}
+
+.formfield input {
+  width: 430px;
+  font-size: 20px;
+}
+
+.task.formfield select {
+  appearance: none;
+}
+
+.tasks {
+  margin-top: 10px;
+  background-color: rgb(247, 12, 8);
+  border: 1px solid black;
+  border-radius: 6px;
+  padding: 10px;
+  justify-content: space-between;
+  text-transform: lowercase;
+}
+
+select.glow {
+  width: 200px;
+}
+
+.counter-coffee {
+  display: inline-flex;
+  align-items: center;
+  margin-bottom: 50px;
+}
+
+.counter-coffee p {
+  padding-left: 10px;
+  font-size: 30px;
+  font-weight: bolder;
+}
+
+
+.fade-out {
+  animation: fadeOut 0.5s ease-in-out;
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+.spin {
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.pulse {
+  animation-name: pulse;
+  animation-duration: 1s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  cursor: pointer;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.1);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+.glow {
+  animation: glow-effect 1.5s infinite;
+  cursor: pointer;
+}
+
+@keyframes glow-effect {
+  0% {
+    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.7);
+  }
+
+  100% {
+    box-shadow: 0 0 0 20px rgba(255, 255, 255, 0);
+  }
+}

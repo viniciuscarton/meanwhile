@@ -1,0 +1,22 @@
+* { 
+    padding-top: 1px;
+    width: 100%;
+    background-color: rgb(247, 12, 8);
+}
+
+.footer p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    letter-spacing: 1px;
+    font-family: 'Merriweather';
+    font-weight: bolder;
+}
+
+.floor {
+    height: 300px;
+    background-image: url('/assets/images/floor2.jpg'); 
+    background-size: contain ;
+    background-repeat: repeat;
+}

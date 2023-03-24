@@ -1,0 +1,53 @@
+<div class="container">
+    <div class="add">
+        <img src="assets/images/logo.png">
+        <h1>Meanwhile</h1>
+    </div>
+    <div class="task-container">
+        <form class="task formfield">
+            <input type="text" placeholder="Task..." #taskname
+                (keyup.enter)="addTask(taskname.value, tasktimeunit.value, taskplaceunit.value); taskname.value='' ">
+            <select class="glow" #tasktimeunit>
+                <option class="option" value="minutes">Minutes</option>
+                <option class="option" value="hours">Hours</option>
+                <option class="option" value="days">Days</option>
+            </select>
+            <select class="glow" #taskplaceunit>
+                <option class="option" value="Anywhere">Anywhere</option>
+                <option class="option" value="Somewhere">Somewhere</option>
+            </select>
+            <img src="/assets/images/add.png" style="width: 45px; margin-bottom: 50px;"
+                (click)="addTask(taskname.value, tasktimeunit.value, taskplaceunit.value); taskname.value=''"
+                class="pulse">
+            <div class="counter-coffee"><img src="assets/images/coffee.png" style="width: 60px;" class="spin">
+                <p>{{this.counter}}</p>
+            </div>
+        </form>
+        <div class="filter">
+            <button (click)="sortByTime = true; sortByPlace = false; sortTasks()" class="glow"
+                style="font-size: 15px; border: 1px solid black; border-radius: 6px; margin-right: 10px; font-family: 'Merriweather';">sort
+                by time</button>
+            <button (click)="sortByPlace = true; sortByTime = false; sortTasks()" class="glow"
+                style="font-size: 15px; border: 1px solid black; border-radius: 6px; margin-right: 10px; font-family: 'Merriweather';">sort
+                by place</button>
+        </div>
+        <div class="task tasks" *ngFor="let item of list" [class.fade-out]="item.fadeOut">
+            <div style="width: 475px;">
+                <h1 style="font-size: 20px;   font-family: 'Merriweather';">{{item.name}}</h1>
+            </div>
+            <div style="width: 200px;">
+                <h1 style="font-size: 20px; padding-left: 10px;   font-family: 'Merriweather';">{{item.time}}</h1>
+            </div>
+            <div style="width: 200px;">
+                <h1 style="font-size: 20px; padding-left: 10px;   font-family: 'Merriweather';">{{item.place}}</h1>
+            </div>
+            <img class="pulse" src="assets/images/up.png" style="width: 25px" (click)="updateProgress(item, 10)">
+            <div>
+                <h1 style="font-size: 20px; padding-left: 10px;   font-family: 'Merriweather';">{{item.progress}}% </h1>
+            </div>
+            <img class="pulse" src="assets/images/down.png" style="width: 25px;" (click)="updateProgress(item, -10)">
+            <img class="pulse" src="assets/images/check.png" style="width: 35px" (click)="completeTask(item.id)">
+            <img class="pulse" src="assets/images/close.png" style="width: 35px" (click)="removeTask(item.id)">
+        </div>
+    </div>
+</div>
